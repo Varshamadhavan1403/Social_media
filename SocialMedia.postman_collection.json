@@ -1,0 +1,298 @@
+{
+	"info": {
+		"_postman_id": "6a21e06b-0f59-4709-b004-312d4e29185e",
+		"name": "SocialMedia",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20204430"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "abc@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "first_name",
+							"value": "abc",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "def",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Password@1",
+							"type": "text"
+						},
+						{
+							"key": "password2",
+							"value": "Password@1",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "abc",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/register/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "abc@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Password@1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/login/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search_user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE4MjAxMDY1LCJpYXQiOjE3MTgyMDA3NjUsImp0aSI6IjQxM2JlMjMwYWJiNjRjOWNiMTM0ZTQ0MjRiNTU5NTg1IiwidXNlcl9pZCI6MTJ9.PpzaXhFbhx_hLHFr5jzJPKr454w2MYHLDi2nxhh4S7I",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/search/?q=va",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"search",
+						""
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "va"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "send_friend_request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE4MjAxNDAzLCJpYXQiOjE3MTgyMDExMDMsImp0aSI6ImYzNWM4YjY4ZDliYjQyYTE4YzAxODk2NDJhZTc2NjNhIiwidXNlcl9pZCI6MTJ9.GDeGnrbH-JWCDYxvBfxBvzIg72EJOH6TMRNAhoiLk8s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "to_user_email",
+							"value": "varshamadhavan1622@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/friend-request/send/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"friend-request",
+						"send",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "respond friend request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE4MjAxNDAzLCJpYXQiOjE3MTgyMDExMDMsImp0aSI6ImYzNWM4YjY4ZDliYjQyYTE4YzAxODk2NDJhZTc2NjNhIiwidXNlcl9pZCI6MTJ9.GDeGnrbH-JWCDYxvBfxBvzIg72EJOH6TMRNAhoiLk8s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/friend-request/respond/2/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"friend-request",
+						"respond",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "friends_list",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE4MjczODYyLCJpYXQiOjE3MTgyNzM1NjIsImp0aSI6IjJhNjRjNjZmYzVlNjRjOTlhODU2Yjc4ZGM0M2Y0OTlhIiwidXNlcl9pZCI6MTJ9.oTQSpDwgx1PK9XER_hxG5OYIrsgEO9hAOQ-QhDfXgSA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/friends/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"friends",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pending_requests",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE4MjczODYyLCJpYXQiOjE3MTgyNzM1NjIsImp0aSI6IjJhNjRjNjZmYzVlNjRjOTlhODU2Yjc4ZGM0M2Y0OTlhIiwidXNlcl9pZCI6MTJ9.oTQSpDwgx1PK9XER_hxG5OYIrsgEO9hAOQ-QhDfXgSA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/friend-requests/pending/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"friend-requests",
+						"pending",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

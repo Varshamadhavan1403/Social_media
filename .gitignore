@@ -1,0 +1,55 @@
+# Python-related files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django-related files
+db.sqlite3
+*.sqlite3
+*.log
+*.pot
+*.pyc
+*.pyc.*
+*.pyo
+*.pyo.*
+*.coverage
+.coverage.*
+.cache
+.scrapy
+*.pid
+*.swp
+*~
+tags
+venv
+*.bak
+
+# Environment variable files
+.env
+
+# Node.js files (if using Node.js for frontend)
+node_modules/
+
+# macOS files
+.DS_Store
+
+# Backup files
+*.bak
+
+# Other system files
+Thumbs.db
+ehthumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Static files
+staticfiles/
+
+# Media files
+media/
+
+# Virtual environment directory
+socialenv/
